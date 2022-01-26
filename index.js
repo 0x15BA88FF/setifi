@@ -1015,6 +1015,7 @@ function validate(minLength, value){
     var masterNumErrorCode = 1
     var symbowlErrorCode = 0 // 0 = safe, 1 = poor
     var masterSymbowlErrorCode = 1
+    var masterUseabilityErrorCode = 0
     var useabilityErrorCode = 0 // 0 = safe, 1 = poor
     var validateErrorCode; // value = length, number, symbowl, usability error codes as a string 
 
@@ -1029,11 +1030,14 @@ function validate(minLength, value){
     }
 
     //Validate Password Usability    
-    if(passwordInput.includes(exceptions)){
-        useabilityErrorCode = 1
-    }
-    else {
-        useabilityErrorCode = 0
+    for (let index = 0; index < exceptions.length; index++) {
+        if(passwordInput != exceptions[index]){
+            masterUseabilityErrorCode = 0
+            useabilityErrorCode = 0
+        }
+        else {
+            useabilityErrorCode = 1
+        }
     }
 
     //number and symbowl validation
@@ -1068,6 +1072,12 @@ function validate(minLength, value){
         masterNumErrorCode = numErrorCode
     } else {
         numErrorCode = masterNumErrorCode
+    }
+
+    if(masterUseabilityErrorCode === useabilityErrorCode){
+        masterUseabilityErrorCode = useabilityErrorCode
+    } else {
+        useabilityErrorCode = masterUseabilityErrorCode
     }
 
     if(masterSymbowlErrorCode === symbowlErrorCode){
@@ -1128,18 +1138,18 @@ function validate(minLength, value){
     exports.strengthLevel = strengthLevel;
 }
 
-function compare(blueField, blueField2){
-    var passwordInput = blueField.value
-    var passwordInput2 = blueField2.value
+function compare(passField, passField2){
+    var passwordInput = passField
+    var passwordInput2 = passField2
     var compareMessage = ""
     var compareErrorCode = 0
 
     if(passwordInput === passwordInput2){
         compareErrorCode = 0
-        compareMessage = "Passwords match"
+        compareMessage = "Fields match"
     } else {
         compareErrorCode = 1
-        compareMessage = "Passwords do not match"
+        compareMessage = "Fields do not match"
     }
     
     exports.compareErrorCode = compareErrorCode;

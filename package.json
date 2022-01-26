@@ -1,0 +1,26 @@
+{
+  "name": "setifi",
+  "version": "1.0.2",
+  "description": "Make auth input validation easier and keep users safe from brute force attacks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pascall-de-creator/setifi.git"
+  },
+  "keywords": [
+    "validate",
+    "setifi",
+    "password",
+    "authentication",
+    "verify"
+  ],
+  "author": "Pascall de creator",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pascall-de-creator/setifi/issues"
+  },
+  "homepage": "https://github.com/pascall-de-creator/setifi#readme"
+}
