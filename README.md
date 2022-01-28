@@ -1,6 +1,6 @@
 # Setifi
 
-https://setifijs.netlify.app/src/
+[![Build Status](https://setifijs.netlify.app/resources/brand.png)](https://setifijs.netlify.app/src/)
 
 [![Build Status](https://camo.githubusercontent.com/ae5c26794bd2361513919f6e0c2bf368b5ac0ca1af9b2614d02358ccfa6f0e55/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f657870726573732e737667)](https://www.npmjs.com/package/setifi)
 
