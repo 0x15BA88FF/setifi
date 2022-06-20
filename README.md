@@ -51,7 +51,7 @@ document.getElementById("compareBtn").addEventListener("click", compare);
 * field comparison
 
 ## Docs and Community
-* [Documantations](https://setifijs.netlify.app/src/)
+* [Documantations](https://setifijs.netlify.app/)
 
 # Security Issues
 If you discover a security vulnerability in setifi, please see write a comment on the package version on github.
